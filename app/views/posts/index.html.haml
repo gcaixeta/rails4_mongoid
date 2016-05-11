@@ -1,7 +1,7 @@
-%div{ 'ng-controller': 'PostsController as controller' }
+%div{ 'ng-controller': 'PostsController as controller', class: 'row' }
   %h1 Listing posts
 
-  %table
+  %table{ class: 'table table-bordered table-striped' }
     %thead
       %tr
         %th Title
@@ -27,4 +27,6 @@
 
   %br
 
-  = link_to 'New Post', new_post_path
+  = link_to 'New Post', new_post_path, { class: 'btn btn-default', 'uib-tooltip': 'Create a new post...', 'tooltip-trigger': 'mouseenter', 'tooltip-placement': 'right' }
+
+
