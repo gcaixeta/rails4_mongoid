@@ -1,25 +1,26 @@
-%h1 Listing posts
+%div{"ng-controller" => "PostsController as controller"}
+  %h1 Listing posts
 
-%table
-  %thead
-    %tr
-      %th Title
-      %th Body
-      %th Starred
-      %th
-      %th
-      %th
-
-  %tbody
-    - @posts.each do |post|
+  %table
+    %thead
       %tr
-        %td= post.title
-        %td= post.body
-        %td= post.starred
-        %td= link_to 'Show', post
-        %td= link_to 'Edit', edit_post_path(post)
-        %td= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %th Title
+        %th Body
+        %th Starred
+        %th
+        %th
+        %th
 
-%br
+    %tbody
+      - @posts.each do |post|
+        %tr
+          %td= post.title
+          %td= post.body
+          %td= post.starred
+          %td= link_to 'Show', post
+          %td= link_to 'Edit', edit_post_path(post)
+          %td= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-= link_to 'New Post', new_post_path
+  %br
+
+  = link_to 'New Post', new_post_path
