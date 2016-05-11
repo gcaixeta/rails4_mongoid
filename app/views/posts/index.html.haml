@@ -1,4 +1,4 @@
-%div{"ng-controller" => "PostsController as controller"}
+%div{ 'ng-controller': 'PostsController as controller' }
   %h1 Listing posts
 
   %table
@@ -12,14 +12,18 @@
         %th
 
     %tbody
-      - @posts.each do |post|
-        %tr
-          %td= post.title
-          %td= post.body
-          %td= post.starred
-          %td= link_to 'Show', post
-          %td= link_to 'Edit', edit_post_path(post)
-          %td= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %tr{ 'ng-repeat': 'post in posts' }
+        %td {{ post.title }}
+        %td {{ post.body }}
+        %td {{ post.starred }}
+        %td
+          %a{ href: '{{post.url }}' } Show
+        %td
+          %a{ href: "{{post.url + '/edit' }}" } Edit
+        %td
+          %a{ href: "{{post.url}}", data: { method: 'delete', confirm: 'Are you sure?' } } Destroy
+
+
 
   %br
 
