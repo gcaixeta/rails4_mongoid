@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/rharriso/bower-rails.git
+  revision: cb7d1653cffc838dd3dfe09fcca0449f098b66ae
+  specs:
+    bower-rails (0.10.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -155,6 +161,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bower-rails!
   byebug
   haml (~> 4.0.7)
   jbuilder (~> 2.0)

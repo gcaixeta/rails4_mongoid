@@ -12,6 +12,8 @@ gem 'mongoid', '~> 5.1.0'
 
 gem 'haml', '~> 4.0.7'
 
+gem 'bower-rails', github: 'rharriso/bower-rails'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 

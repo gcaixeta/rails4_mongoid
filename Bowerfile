@@ -1,0 +1,3 @@
+asset 'angular', '1.5.5'
+
+asset 'angular-bootstrap', '1.3.2'
