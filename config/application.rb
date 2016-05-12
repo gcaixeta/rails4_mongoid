@@ -33,5 +33,9 @@ module Rails4Mongoid
     # config.active_record.raise_in_transactional_callbacks = true
 
     config.web_console.whitelisted_ips = '10.0.2.0/16'
+
+    config.generators do |g|
+      g.orm :mongoid
+    end
   end
 end

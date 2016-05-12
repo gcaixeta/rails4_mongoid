@@ -2,7 +2,8 @@ class Post
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  embeds_many :comments
+  has_many :comments
+  belongs_to :user
 
   field :title, type: String
   field :body, type: String
